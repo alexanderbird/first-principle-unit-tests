@@ -1,16 +1,30 @@
-const { adder } = require('./subject');
+const { fibonacci } = require('./subject');
 
 function main() {
-  testTheSumOfZeroIsZero();
+  fibonacciUpToZeroIsEmpty();
 }
 
-function testTheSumOfZeroIsZero() {
-  const result = adder(0, 0);
+function fibonacciUpToZeroIsEmpty() {
+  const result = fibonacci(0);
 
-  if (result !== 0) { throw new Error('Expected 0, got ' + result); }
+  expectThat(result).isArrayEqualTo([]);
 }
 
 main();
 
 console.log('PASS');
 
+/*****/
+
+function expectThat(actual) {
+  return {
+    isArrayEqualTo(expected) {
+      if (actual.length !== expected.length) { throw new Error(`Expected array of length ${expected.length}, got ${actual.length}.`); }
+      for (let i = 0; i < actual.length; i++) {
+        if (actual[i] !== expected[i]) {
+          throw new Error(`Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}.`);
+        }
+      }
+    }
+  }
+}

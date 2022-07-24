@@ -1,5 +1,5 @@
-function adder(one, two) {
-  return 0;
+function fibonacci(max) {
+  return [];
 }
 
-module.exports = { adder };
+module.exports = { fibonacci };
