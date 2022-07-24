@@ -13,6 +13,12 @@ class Tests {
 
     expectThat(result).isArrayEqualTo([1, 1]);
   }
+
+  testFibonacciUpToTwoWorks() {
+    const result = fibonacci(2);
+
+    expectThat(result).isArrayEqualTo([1, 1, 2]);
+  }
 }
 
 
