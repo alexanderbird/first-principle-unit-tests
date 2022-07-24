@@ -19,6 +19,18 @@ class Tests {
 
     expectThat(result).isArrayEqualTo([1, 1, 2]);
   }
+
+  testFibonacciUpToThreeWorks() {
+    const result = fibonacci(3);
+
+    expectThat(result).isArrayEqualTo([1, 1, 2, 3]);
+  }
+
+  testFibonacciUpToFourIsTheSameAsUpToThree() {
+    const result = fibonacci(4);
+
+    expectThat(result).isArrayEqualTo(fibonacci(3));
+  }
 }
 
 
