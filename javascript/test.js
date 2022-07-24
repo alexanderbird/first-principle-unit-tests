@@ -36,6 +36,12 @@ class Tests {
     expectThat(() => fibonacci(-1))
       .throwsExceptionWithMessage("Invalid parameter: expected a number greater than or equal to zero, got -1");
   }
+
+  testFibonacciForThirtyWorks() {
+    const result = fibonacci(30);
+
+    expectThat(result).isArrayEqualTo([1,1,2,3,5,8,13,21]);
+  }
 }
 
 
@@ -63,7 +69,7 @@ function expectThat(actual) {
     },
 
     isArrayEqualTo(expected) {
-      if (actual.length !== expected.length) { throw new Error(`Expected array of length ${expected.length}, got ${actual.length}.`); }
+      if (actual.length !== expected.length) { throw new Error(`Expected array of length ${expected.length}, got ${actual.length}.\nExpected: ${JSON.stringify(expected)}\nActual: ${JSON.stringify(actual)}`); }
       for (let i = 0; i < actual.length; i++) {
         if (actual[i] !== expected[i]) {
           throw new Error(`Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}.`);
