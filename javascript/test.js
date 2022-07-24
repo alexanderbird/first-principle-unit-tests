@@ -2,12 +2,19 @@ const { fibonacci } = require('./subject');
 
 function main() {
   fibonacciUpToZeroIsEmpty();
+  fibonacciUpToOneIsAPairOfOnes();
 }
 
 function fibonacciUpToZeroIsEmpty() {
   const result = fibonacci(0);
 
   expectThat(result).isArrayEqualTo([]);
+}
+
+function fibonacciUpToOneIsAPairOfOnes() {
+  const result = fibonacci(1);
+
+  expectThat(result).isArrayEqualTo([1, 1]);
 }
 
 main();
