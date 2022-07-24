@@ -1,25 +1,33 @@
 const { fibonacci } = require('./subject');
 
-function main() {
-  fibonacciUpToZeroIsEmpty();
-  fibonacciUpToOneIsAPairOfOnes();
+class Tests {
+
+  testFibonacciUpToZeroIsEmpty() {
+    const result = fibonacci(0);
+
+    expectThat(result).isArrayEqualTo([]);
+  }
+
+  testFibonacciUpToOneIsAPairOfOnes() {
+    const result = fibonacci(1);
+
+    expectThat(result).isArrayEqualTo([1, 1]);
+  }
 }
 
-function fibonacciUpToZeroIsEmpty() {
-  const result = fibonacci(0);
 
-  expectThat(result).isArrayEqualTo([]);
-}
-
-function fibonacciUpToOneIsAPairOfOnes() {
-  const result = fibonacci(1);
-
-  expectThat(result).isArrayEqualTo([1, 1]);
-}
-
-main();
-
-console.log('PASS');
+const allTests = new Tests();
+Object.getOwnPropertyNames(Tests.prototype)
+  .filter(name => name.match(/^test/))
+  .forEach(test => {
+    try {
+      allTests[test]();
+    } catch(e) {
+      console.log(test + '... FAIL');
+      throw e;
+    }
+    console.log(test + '... PASS');
+  });
 
 /*****/
 
