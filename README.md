@@ -52,3 +52,13 @@ Interested in contributing your own examples?
     1. your example in a subdirectory prefixed with the language of your choosing
     2. a README at the root of the subdirectory with test runner output examples (pass and fail)
     3. update the main README with a link and description of your example
+
+## Goal
+
+By creating examples of the most trivial test runners, I hope to:
+1. better understand the test tooling problem space ("what's the minimum we need to write unit tests?")
+    - I expect this to result in a clearer section in this README under "test tooling parts"
+2. create an educational resource (test runners are magic for new programmers, but these trivial mini test runners should be understandable even for new folks)
+    - I hope to be able to point folks who are new to the field to these examples when I'm explaining unit testing basics
+3. this is a fun way for me to do TDD katas; it adds another layer of excitement over the basic problem solving
+    - I suspect I'll come back in the future to add more examples just for fun
