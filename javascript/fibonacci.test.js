@@ -1,10 +1,15 @@
 const { fibonacci } = require('./fibonacci');
 const { arrayEquals } = require('./test/assertions');
 
-function testUpToOneIncludesTwoOnes() {
+const tests = [];
+
+tests.push(function testUpToOneIncludesTwoOnes() {
   const result = fibonacci(1);
 
   arrayEquals(result, [1,1]);
-}
+});
 
-testUpToOneIncludesTwoOnes();
+tests.forEach(test => {
+  console.log(' - ' + test.name);
+  test()
+});
