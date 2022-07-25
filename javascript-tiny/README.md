@@ -13,6 +13,8 @@ module.exports = { describe, test };
 
 -----
 
+### Example test output
+
 `node fibonacci.test.js`
 
 ```
