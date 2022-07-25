@@ -19,6 +19,23 @@ power to add an off the shelf test runner. None of these need be obstacles to
 unit testing. This repo gives examples of bare-bones test runners that can be
 built in minutes or hours and iterated on while you write unit tests.
 
+## Test tooling parts
+
+What do you need to run unit tests?
+- pass/fail mechanism (the simplest is to throw a descriptive error on failure;
+  more complicated mechanisms give statistics and show results from multiple
+  failures)
+- Assertion tools for comparing expected with actual
+- test runner
+   - with a manual/explicit test runner, each test method is explicitly called
+   - the test runner may discover test methods (through reflection) so they
+     don't have to be called explicitly
+   - the test runner may discover test files so they don't have to be called
+     explicitly
+   - for small numbers of test methods and test files, it would be fine to call
+     them all explicitly
+
 ## Examples
 
-- [JavaScript (with test file discovery)](./javascript-with-test-file-discovery)
+- [JavaScript (simple -- single test file, with test method discovery)](./javascript-simple)
+- [JavaScript (with test method and testfile discovery)](./javascript-with-test-file-discovery)
