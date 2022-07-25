@@ -44,3 +44,11 @@ tools.*
 
 - [JavaScript (simple -- single test file, with test method discovery)](./javascript-simple)
 - [JavaScript (with test method and testfile discovery)](./javascript-with-test-file-discovery)
+
+## Contributing
+
+Interested in contributing your own examples?
+1. Submit a PR with
+    1. your example in a subdirectory prefixed with the language of your choosing
+    2. a README at the root of the subdirectory with test runner output examples (pass and fail)
+    3. update the main README with a link and description of your example
