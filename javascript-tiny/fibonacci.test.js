@@ -1,4 +1,5 @@
-const { describe, test, assertThat } = require('./testRunner');
+const { describe, test } = require('./testRunner');
+const { assertThat } = require('./assertions');
 const { fibonacci } = require('./fibonacci');
 
 describe(() => {
