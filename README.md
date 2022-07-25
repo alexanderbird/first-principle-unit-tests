@@ -40,7 +40,8 @@ What do you need to run unit tests?
 *Using these examples: each README has an example of the test runner output.
 You can browse to the test file for the example to get an idea of what the test
 syntax looks like. You'll see it's not that far off from familiar testing
-tools.*
+tools. If you're interested in the iterative process of developing the test runners,
+take a look at the history of the files.*
 
 - [JavaScript (simple -- single test file, with test method discovery)](./javascript-simple)
 - [JavaScript (with test method and testfile discovery)](./javascript-with-test-file-discovery)
