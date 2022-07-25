@@ -1,4 +1,6 @@
-require('./fibonacci.test.js');
+const fs = require('fs');
+
+fs.readFileSync(0, 'utf-8').split('\n').filter(x => !!x).forEach(require);
 
 (global.tests || []).forEach(({ name, testBody }) => {
   try {
