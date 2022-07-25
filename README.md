@@ -1,4 +1,4 @@
-# Zero Dependency Unit Test Runners
+# Examples of unit testing without any test tooling
 
 > Theoretically, if we didn't have a test runner, could we unit test?
 
