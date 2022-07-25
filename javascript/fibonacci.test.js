@@ -13,3 +13,9 @@ test('fibonacci(0) returns an empty list', () => {
   assertThat(result)
     .isEmptyArray();
 });
+
+test('fibonacci(21) returns fibonacci sequence up to and including 21', () => {
+  const result = fibonacci(21);
+  assertThat(result)
+    .containsExactlyElementsOf([1,1,2,3,5,8,13,21]);
+});
