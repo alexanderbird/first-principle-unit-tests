@@ -9,6 +9,17 @@ function assertThat(actual) {
     },
     containsExactlyElementsOf(expected) {
       arrayEquals(actual, expected);
+    },
+    throwsExceptionWithMessage(message) {
+      try {
+        actual();
+      } catch(e) {
+        if (e.message !== message) {
+          throw new Error(`Expected ${actual.toString()} to throw an exception with message "${message}" but instead it threw with "${e.message}"`);
+        }
+        return;
+      }
+      throw new Error(`Expected ${actual.toString()} to throw but it did not`);
     }
   }
 }

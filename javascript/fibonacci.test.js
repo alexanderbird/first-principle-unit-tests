@@ -19,3 +19,8 @@ test('fibonacci(21) returns fibonacci sequence up to and including 21', () => {
   assertThat(result)
     .containsExactlyElementsOf([1,1,2,3,5,8,13,21]);
 });
+
+test('fibonacci(-1) throws a not implemented exception', () => {
+  assertThat(() => fibonacci(-1))
+    .throwsExceptionWithMessage("Invalid Parameter: max length must be greater than or equal to zero, but was -1");
+});
