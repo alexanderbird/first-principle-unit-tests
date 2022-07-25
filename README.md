@@ -45,6 +45,7 @@ take a look at the history of the files.*
 
 - [JavaScript (simple -- single test file, with test method discovery)](./javascript-simple)
 - [JavaScript (with test method and testfile discovery)](./javascript-with-test-file-discovery)
+- [JavaScript (very small)](./javascript-tiny)
 
 ## Contributing
 
