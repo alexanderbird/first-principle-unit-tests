@@ -21,4 +21,4 @@ built in minutes or hours and iterated on while you write unit tests.
 
 ## Examples
 
-- [JavaScript](./javascript)
+- [JavaScript (with test file discovery)](./javascript-with-test-file-discovery)
