@@ -1,16 +1,7 @@
 #!/bin/bash
 
 source ./fibonacci.sh
-
-assertEquals() {
-  actual="$1"
-  expected="$2"
-
-  if [[ "$actual" != "$expected" ]]
-  then
-    echo "Expected '$actual' to equal '$expected'"
-  fi
-}
+source ./assertions.sh
 
 testFibonacciWithAMaxOfZeroGivesAHelpfulErrorMessage() {
   echo "${FUNCNAME[0]}"
@@ -36,5 +27,4 @@ testFibonacciWithAMaxOfThirtyGivesTheSequenceUpToTwentyOne() {
   assertEquals "$actual" "1 1 2 3 5 8 13 21"
 }
 
-eval "$(declare -F | awk '{ print $3 }' | grep -E "^test")"
-
+source ./testRunner.sh
